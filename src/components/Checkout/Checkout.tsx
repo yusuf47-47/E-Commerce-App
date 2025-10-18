@@ -18,6 +18,7 @@ import { Loader2 } from "lucide-react"
 import { checkoutAction } from "@/app/(pages)/cart/_action/checkout.action"
 import { cashCheckoutAction } from "@/app/(pages)/cart/_action/cashCheckout.action"
 import { useRouter } from "next/navigation"
+import { ShippingI } from "@/interfaces"
 
 
 
@@ -37,7 +38,7 @@ export default function Checkout({ cartId }: { cartId: string }) {
     async function checkoutSession() {
         setCheckingOut(true);
 
-        const shippingAddress = {
+        const shippingAddress: ShippingI = {
             details: detailsInput.current?.value,
             city: cityInput.current?.value,
             phone: phoneInput.current?.value
@@ -57,7 +58,7 @@ export default function Checkout({ cartId }: { cartId: string }) {
     async function cashCheckoutSession() {
         setCashCheckingOut(true);
 
-        const shippingAddress = {
+        const shippingAddress: ShippingI = {
             details: detailsInput.current?.value,
             city: cityInput.current?.value,
             phone: phoneInput.current?.value

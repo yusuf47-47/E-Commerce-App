@@ -1,10 +1,12 @@
 'use server'
 
 import { getUserToken } from "@/app/Helper/getUserToken";
+import { ShippingI } from "@/interfaces";
 
 
 
-export async function checkoutAction(cartId: string, shippingAddress: any) {
+
+export async function checkoutAction(cartId: string, shippingAddress: ShippingI) {
 
 
     const token = await getUserToken();

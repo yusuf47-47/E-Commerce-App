@@ -31,7 +31,7 @@ export function LoginForm() {
 
     const [isLoading, setIsLoading] = useState(false);
 
-    let searchParams = useSearchParams();
+    const searchParams = useSearchParams();
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),

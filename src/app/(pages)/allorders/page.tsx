@@ -2,8 +2,9 @@
 
 import { formatCurrency } from "@/app/Helper/formatPrice";
 import { Card } from "@/components/ui/card";
-import { CartResponse, OrdersI } from "@/interfaces";
+import { OrdersI } from "@/interfaces";
 import { Loader2 } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function AllOrders() {
@@ -48,8 +49,10 @@ export default function AllOrders() {
                             <div className="grid grid-cols-1 lg:grid-cols-3 lg:items-start mt-6 gap-6">
                                 <div className="lg:col-span-3 space-y-4">
                                     <div className="flex gap-4 rounded-xl  p-4  bg-gray-50">
-                                        <img src={cartItems.product.imageCover}
+                                        <Image src={cartItems.product.imageCover}
                                             alt={cartItems.product.title}
+                                            width={700}
+                                            height={700}
                                             className='w-24 h-24 rounded-lg object-cover md:w-40 md:h-40' />
                                         <div className="flex min-w-0">
                                             <div className="flex min-w-0 flex-col sm:items-start sm:justify-between  gap-2">

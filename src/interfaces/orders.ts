@@ -1,7 +1,7 @@
 
 import { CartResponse } from "./cart"
 import { UserResponse } from "./login"
-import { ProductI } from "./products"
+
 
 export interface OrdersI {
     shippingAddress: ShippingAddress

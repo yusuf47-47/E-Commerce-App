@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 
 
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { Loader2 } from "lucide-react"
 import { formSchema } from "../Schema/schema"
@@ -33,8 +33,6 @@ export function RegisterForm() {
     const [isLoading, setIsLoading] = useState(false);
     const [messToUser, setMessToUser] = useState<string>('success');
 
-    let searchParams = useSearchParams();
-
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -46,7 +44,7 @@ export function RegisterForm() {
         }
     })
 
-    let router = useRouter();
+    const router = useRouter();
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
 

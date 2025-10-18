@@ -39,6 +39,7 @@ export default function CartContextProvider({ children }: { children: ReactNode 
 
         setIsLoading(false);
     }
+
     const session = useSession();
 
 

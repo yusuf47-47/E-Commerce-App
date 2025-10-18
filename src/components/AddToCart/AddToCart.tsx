@@ -3,7 +3,7 @@
 import { HeartIcon, Loader2, ShoppingCartIcon } from "lucide-react";
 import { CardFooter } from "../ui/card";
 import { Button } from "../ui/button";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { CartContext } from "../Context/CartContext";
 import { addToCartAction } from "@/app/(pages)/products/_action/addToCart.action";
