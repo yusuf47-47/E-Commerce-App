@@ -23,7 +23,7 @@ export default function AddToCart({ productId }: { productId: string }) {
 
     const session = useSession();
 
-    let router = useRouter()
+    const router = useRouter()
 
     async function addProductToCart() {
         if (session.status == 'authenticated') {

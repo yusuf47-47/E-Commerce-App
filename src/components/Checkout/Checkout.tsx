@@ -53,7 +53,7 @@ export default function Checkout({ cartId }: { cartId: string }) {
         setCheckingOut(false);
     }
 
-    let rounter = useRouter();
+    const rounter = useRouter();
 
     async function cashCheckoutSession() {
         setCashCheckingOut(true);
